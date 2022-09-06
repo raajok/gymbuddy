@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 var testAPIRouter = require("./routes/testAPI");
-var programsRouter = require('./routes/programs-page/programs-routes');
+var programsRouter = require('./routes/programs-routes');
 
 // testing API connection
 app.use("/api/testAPI", testAPIRouter);
