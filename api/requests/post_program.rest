@@ -1,0 +1,44 @@
+POST http://localhost:9000/api/programs
+content-type: application/json
+
+{
+  "title":"Arnold's golden six",
+  "description":"Famous program for beginners. Arnold's golden six will have you hitting the gym 3 times a week. The program only has one full body workout.",
+  "days":[
+    {
+      "movements":[
+        {
+          "name":"Squat",
+          "amountOfSets":"4",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Bench Press",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Pull Ups",
+          "amountOfSets":"3",
+          "amountOfReps":"max"
+        },
+        {
+          "name":"Barbell Military Press",
+          "amountOfSets":"4",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Barbell Curl",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Abs",
+          "amountOfSets":"3",
+          "amountOfReps":"max"
+        }
+      ]
+    }
+  ],
+  "deletable":false
+}

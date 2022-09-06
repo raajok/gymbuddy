@@ -21,9 +21,12 @@ app.use(cors());
 app.use(express.json());
 
 var testAPIRouter = require("./routes/testAPI");
+var programsRouter = require('./routes/programs-page/programs-routes');
 
 // testing API connection
-app.use("/testAPI", testAPIRouter);
+app.use("/api/testAPI", testAPIRouter);
+
+app.use('/api/programs', programsRouter);
 
 app.listen(9000, () => {
   console.log(`Server started at ${9000}`);
