@@ -1,21 +1,21 @@
 import * as React from "react";
-import axios from "axios";
+import {
+  BrowserRouter as Router, Routes,
+  Route
+} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Training from './components/training/Training';
+import Programs from './components/programs/Programs';
 
 const App = () => {
-  const [response, setResponse] = React.useState("");
-
-  React.useEffect(() => {
-    axios.get('http://localhost:9000/testAPI')
-      .then(res => {
-        setResponse(res.data);
-      });
-  }, []);
-
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-      <p>{response}</p>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Training />} />
+        <Route path='/programs' element={<Programs />} />
+      </Routes>
+    </Router>
   );
 };
 
