@@ -2,18 +2,135 @@ POST http://localhost:9000/api/programs
 content-type: application/json
 
 {
-  "title":"Arnold's golden six",
-  "description":"Famous program for beginners. Arnold's golden six will have you hitting the gym 3 times a week. The program only has one full body workout.",
+  "title":"4x Week Full Body",
+  "description":"Gym-Buddy's recommended program! All of the week's workouts are unique. Fight boredom in the gym with this program!",
   "days":[
+    {
+      "movements":[
+        {
+          "name":"Deadlift",
+          "amountOfSets":"4",
+          "amountOfReps":"8"
+        },
+        {
+          "name":"Bench Press",
+          "amountOfSets":"5",
+          "amountOfReps":"5"
+        },
+        {
+          "name":"Dumbbell Row",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Dumbbell Overhead Press",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Lat Pulldown",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Calf Raise",
+          "amountOfSets":"3",
+          "amountOfReps":"15"
+        },
+        {
+          "name":"Abs",
+          "amountOfSets":"3",
+          "amountOfReps":"max"
+        }
+      ]
+    },
     {
       "movements":[
         {
           "name":"Squat",
           "amountOfSets":"4",
+          "amountOfReps":"8"
+        },
+        {
+          "name":"Barbell Row",
+          "amountOfSets":"3",
           "amountOfReps":"10"
         },
         {
           "name":"Bench Press",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Leg Extension",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Leg Curl",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Bicep Curl",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Tricep Extension",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Rear Delt Fly",
+          "amountOfSets":"3",
+          "amountOfReps":"15"
+        }
+      ]
+    },
+    {
+      "movements":[
+        {
+          "name":"Romanian Deadlift",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Incline Bench Press",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Seated Cable Row",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Push-ups",
+          "amountOfSets":"3",
+          "amountOfReps":"max"
+        },
+        {
+          "name":"Inverted Row",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Calf Raise",
+          "amountOfSets":"3",
+          "amountOfReps":"15"
+        },
+        {
+          "name":"Abs",
+          "amountOfSets":"3",
+          "amountOfReps":"max"
+        }
+      ]
+    },
+    {
+      "movements":[
+        {
+          "name":"Squat",
           "amountOfSets":"3",
           "amountOfReps":"10"
         },
@@ -23,19 +140,39 @@ content-type: application/json
           "amountOfReps":"max"
         },
         {
-          "name":"Barbell Military Press",
-          "amountOfSets":"4",
-          "amountOfReps":"10"
-        },
-        {
-          "name":"Barbell Curl",
+          "name":"Incline Bench Press",
           "amountOfSets":"3",
           "amountOfReps":"10"
         },
         {
-          "name":"Abs",
+          "name":"Lat Pulldown",
           "amountOfSets":"3",
-          "amountOfReps":"max"
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Dumbbell Flyes",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Facepull",
+          "amountOfSets":"3",
+          "amountOfReps":"15"
+        },
+        {
+          "name":"Bicep Curl",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Tricep Pushdown",
+          "amountOfSets":"3",
+          "amountOfReps":"10"
+        },
+        {
+          "name":"Dumbbell Lateral Raise",
+          "amountOfSets":"3",
+          "amountOfReps":"15"
         }
       ]
     }
