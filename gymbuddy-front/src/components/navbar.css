@@ -1,18 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .navbar {
-  background-color: black;
-  color: white;
+  background-color: #022D54;
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 0 1rem;
+  color: white;
 }
 
 .navbar ul {

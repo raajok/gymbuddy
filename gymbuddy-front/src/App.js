@@ -6,6 +6,7 @@ import {
 import Navbar from './components/Navbar';
 import Training from './components/training/Training';
 import Programs from './components/programs/Programs';
+import Program from './components/programs/Program';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Training />} />
         <Route path='/programs' element={<Programs />} />
+        <Route path='/programs/:programId' element={<Program />} />
       </Routes>
     </Router>
   );

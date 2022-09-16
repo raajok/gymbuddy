@@ -1,0 +1,52 @@
+.programcard {
+  height: 15rem;
+  width: 15rem;
+  margin: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+}
+
+.programcard a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #022D54;
+  color: white;
+  border-radius: 25px 25px 0px 0px;
+  font-size: 3rem;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.description {
+  border-radius: 0px, 0px, 25px, 25px;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-button {
+  background-color: white;
+  border: 2px solid #022D54;
+  padding: 12px 24px;
+  margin: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background-color: #022c541e;
+}
+
+.card-button-active {
+  background-color: #022c5457;
+  border: 2px solid #022D54;
+  padding: 12px 24px;
+  margin: 5px 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
