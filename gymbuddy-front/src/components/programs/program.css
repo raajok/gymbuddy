@@ -1,0 +1,49 @@
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: black;
+  width: 25rem;
+  margin: 30px;
+  padding: 10px;
+}
+
+.content {
+  background-color: rgba(0, 0, 0, 0.171);
+  color: black;
+  border-radius: 25px;
+  width: 35rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.table {
+  flex: 50%;
+  padding: 25px;
+  text-align: left;
+}
+
+.table table {
+  text-align: left;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.table td, .table th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #b6b6b6;
+}
+
+.table thead {
+  background-color: #022D54;
+  color: white;
+}
