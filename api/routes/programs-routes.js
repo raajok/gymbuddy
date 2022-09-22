@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 const Program = require('../models/program');
@@ -6,7 +7,7 @@ const Program = require('../models/program');
 router.post('/', (req, res) => {
   const body = req.body;
 
-  if (body.title === undefined || body.days === undefined) {
+  if (body.title === undefined || body.title === '' || body.days === undefined) {
       return res.status(400).json({error: 'some data is missing'});
   }
 
@@ -41,8 +42,20 @@ router.get('/:id', (req, res) => {
       res.json(program);
     })
     .catch(error => {
-      console.log(error)
-      response.status(400).send({ error: 'id does not exist' })
+      console.log(error);
+      response.status(400).send({ error: 'id does not exist' });
+    });
+});
+
+router.delete('/delete/:id', (req, res) => {
+  Program
+    .findByIdAndDelete(req.params.id)
+    .then((program) => {
+      res.send(`Program titled ${program.title} has been deleted`);
+    })
+    .catch(error => {
+      console.log(error);
+      response.status(400).json({ message: error.message });
     });
 });
 
