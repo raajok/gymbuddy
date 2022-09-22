@@ -1,0 +1,17 @@
+.form-container {
+  width: 35rem;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+}
+
+.programform {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-field {
+  margin: 10px 0 10px 0;
+  padding: 10px;
+}
