@@ -4,7 +4,7 @@ import ProgramCard from './ProgramCard';
 import ProgramForm from './ProgramForm';
 import './programs.css';
 
-const Programs = () => {
+const Programs = (props) => {
   const [programs, setPrograms] = React.useState([]);
 
   React.useEffect(() => {
@@ -24,7 +24,13 @@ const Programs = () => {
   return (
     <div className="program-container">
       <div className="programcard-container">
-        { programs.map(program => <ProgramCard key={program["_id"]} program={program} />) }
+        { programs.map(program => 
+          <ProgramCard key={program["_id"]} 
+            active={props.active === program["_id"] ? true : false} 
+            setActive={props.setActive} 
+            program={program} 
+          />
+        )}
       </div>
       <div className="programform-container">
         <ProgramForm getPrograms={getPrograms} />
