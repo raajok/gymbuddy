@@ -21,11 +21,16 @@ app.use(cors());
 app.use(express.json());
 
 var testAPIRouter = require("./routes/testAPI");
+var trainingRouter = require('./routes/training-routes');
 var programsRouter = require('./routes/programs-routes');
 
 // testing API connection
 app.use("/api/testAPI", testAPIRouter);
 
+// Router for training page
+app.use('/api/', trainingRouter);
+
+// Router for programs page
 app.use('/api/programs', programsRouter);
 
 app.listen(9000, () => {
