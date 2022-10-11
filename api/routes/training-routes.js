@@ -12,6 +12,7 @@ router.post('/', (req, res) => {
   }
 
   const training = new Training({
+    program: body.program,
     day: body.day,
     date: body.date,
     movements: body.movements

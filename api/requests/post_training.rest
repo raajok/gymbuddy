@@ -2,6 +2,7 @@ POST http://localhost:9000/api/
 content-type: application/json
 
 {
+  "program": "Arnold's Golden Six",
   "day": "Day 1",
   "date": "2022-10-11T12:53:12.831Z",
   "movements": [
