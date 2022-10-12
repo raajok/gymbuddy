@@ -79,7 +79,7 @@ const ProgramForm = (props) => {
       description: values.description,
       days: days,
       deletable: true,
-    }
+    };
 
     axios.post('http://localhost:9000/api/programs', dataToSubmit)
       .then(res => {

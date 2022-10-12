@@ -4,12 +4,22 @@ import ProgramCard from './ProgramCard';
 import ProgramForm from './ProgramForm';
 import './programs.css';
 
-const Programs = (props) => {
+const Programs = () => {
   const [programs, setPrograms] = React.useState([]);
+  const [activeProgram, setActiveProgram] = React.useState("");
 
   React.useEffect(() => {
     getPrograms();
+
+    const active = JSON.parse(localStorage.getItem('activeProgram'));
+    if (active) {
+      setActiveProgram(active);
+    }
   }, []);
+
+  React.useEffect(() => {
+    localStorage.setItem('activeProgram', JSON.stringify(activeProgram));
+  }, [activeProgram]);
 
   const getPrograms = () => {
     axios.get('http://localhost:9000/api/programs')
@@ -26,8 +36,8 @@ const Programs = (props) => {
       <div className="programcard-container">
         { programs.map(program => 
           <ProgramCard key={program["_id"]} 
-            active={props.active === program["_id"] ? true : false} 
-            setActive={props.setActive} 
+            active={activeProgram === program["_id"] ? true : false} 
+            setActive={setActiveProgram} 
             program={program} 
           />
         )}

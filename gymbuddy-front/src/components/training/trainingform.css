@@ -1,0 +1,44 @@
+.training-form {
+  width: 35rem;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.432), 0 6px 20px 0 rgba(0, 0, 0, 0.493);
+}
+
+.movements {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px 0px 15px 0px;
+}
+
+.set-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 6rem;
+  padding: 2px;
+  margin: 5px 0px 0px 10px;
+  border-color: #022D54;
+  border-width: 1px;
+}
+
+li {
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
