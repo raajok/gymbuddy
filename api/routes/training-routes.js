@@ -34,4 +34,17 @@ router.get('/', (req, res) => {
     });
 });
 
+// DELETE a training session
+router.delete('/delete/:id', (req, res) => {
+  Training
+    .findByIdAndDelete(req.params.id)
+    .then((training) => {
+      res.send(`The training session has been deleted`);
+    })
+    .catch(error => {
+      console.log(error);
+      response.status(400).json({ message: error.message });
+    });
+});
+
 module.exports = router;

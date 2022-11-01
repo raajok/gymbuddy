@@ -1,7 +1,20 @@
 import React from 'react';
 import "./session.css";
+import axios from "axios";
 
 const Session = ( props ) => {
+
+  const handleRemove = () => {
+    axios.delete(`http://localhost:9000/api/delete/${props.training["_id"]}`)
+      .then(res => {
+        console.log(res.data);
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+
+    props.handleTrainings();
+  };
 
   return (
     <div className='session'>
@@ -9,7 +22,7 @@ const Session = ( props ) => {
         <h2>{props.training.program + " - " + props.training.day}</h2>
         <p>{props.training.date}</p>
       </div>
-      <div>
+      <div className='table-wrapper'>
         <table>
           <thead>
             <tr>
@@ -38,6 +51,9 @@ const Session = ( props ) => {
             })}
           </tbody>
         </table>
+      </div>
+      <div className='button-wrapper'>
+        <button className='remove-button' onClick={handleRemove}>Remove</button>
       </div>
     </div>
   );

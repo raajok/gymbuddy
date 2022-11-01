@@ -47,6 +47,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// DELETE a program
 router.delete('/delete/:id', (req, res) => {
   Program
     .findByIdAndDelete(req.params.id)

@@ -62,7 +62,7 @@ const TrainingForm = (props) => {
             )
           })}
         </ul>
-        <button onClick={event => props.submit(event, inputValues)}>Submit</button>
+        <button className='submit-button' onClick={event => props.submit(event, inputValues)}>Submit</button>
       </form>
     </div>
   );
