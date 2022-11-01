@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Training from './components/training/Training';
 import Programs from './components/programs/Programs';
 import Program from './components/programs/Program';
+import History from './components/history/History';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/' element={<Training />} />
         <Route path='/programs' element={<Programs />} />
         <Route path='/programs/:programId' element={<Program />} />
+        <Route path='/history' element={<History />} />
       </Routes>
     </Router>
   );

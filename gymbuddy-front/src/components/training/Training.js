@@ -91,7 +91,7 @@ const Training = () => {
     let dataToSubmit = {
       program: program.title,
       day: selectedDay,
-      date: JSON.stringify(new Date()),
+      date: new Date().toDateString(),
       movements: movements
     };
 
