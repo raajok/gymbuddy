@@ -1,6 +1,8 @@
 import React from 'react';
 import './programform.css';
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 
 const ProgramForm = (props) => {
   const [values, setValues] = React.useState({
@@ -127,40 +129,52 @@ const ProgramForm = (props) => {
         {days.map((day, dayIndex) => {
           return (
             <div key={dayIndex}>
-              <h2>Day {dayIndex + 1}</h2>
+              <div className='day-header'>
+                <h2>Day {dayIndex + 1}</h2>
+                <button className='small-button' onClick={(event, dayIndex) => removeDay(event, dayIndex)} >
+                  <FontAwesomeIcon className='icon' icon={faTrashCan} />
+                </button>
+              </div>
               {day.movements.map((movement, movementIndex) => {
                 return(
                   <div key={movementIndex}>
                     <input
-                      className=''
+                      className='input'
                       name='name'
                       placeholder='Movement'
                       value={movement.name}
                       onChange={event => handleMovement(dayIndex, movementIndex, event)}
                     />
                     <input
+                      className='input'
                       name='amountOfSets'
                       placeholder='Sets'
                       value={movement.amountOfSets}
                       onChange={event => handleMovement(dayIndex, movementIndex, event)}
                     />
                     <input
+                      className='input'
                       name='amountOfReps'
                       placeholder='Reps'
                       value={movement.amountOfReps}
                       onChange={event => handleMovement(dayIndex, movementIndex, event)}
                     />
-                    <button onClick={(event) => removeMovement(event, dayIndex, movementIndex)}>Remove</button>
+                    <button className='small-button' onClick={(event) => removeMovement(event, dayIndex, movementIndex)}>
+                      <FontAwesomeIcon className='icon' icon={faTrashCan} />
+                    </button>
+                    <button className='small-button' onClick={(event) => addMovement(event, dayIndex)} >
+                      <FontAwesomeIcon className='icon' icon={faPlus} />
+                    </button>
                   </div>
                 )
               })}
-              <button onClick={(event) => addMovement(event, dayIndex)} >Add a movement</button>
-              <button onClick={(event) => removeDay(event, dayIndex)} >Remove day</button>
             </div>
           )
         })}
-        <button onClick={(event) => addDay(event)} >Add a day</button>
-        <button onClick={submit}>Submit</button>
+        <div>
+          <button className='big-button' onClick={(event) => addDay(event)} >Add a day</button>
+          <button className='big-button' onClick={submit}>Submit</button>
+        </div>
       </form>
     </div>
   );

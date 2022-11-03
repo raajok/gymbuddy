@@ -8,10 +8,52 @@
 .programform {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
 
 .form-field {
   margin: 10px 0 10px 0;
-  padding: 10px;
+  padding: 10px 10px;
+  border: 1px solid #022D54;
+  border-radius: 4px;
+}
+
+.day-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-button {
+  background-color: white;
+  border: 2px solid #022D54;
+  padding: 5px 10px;
+  margin: 5px 0px 0px 10px;
+  font-size: 16px;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.small-button:hover {
+  background-color: #022c541e;
+}
+
+.icon {
+  color: #022D54
+}
+
+.big-button {
+  background-color: white;
+  border: 2px solid #022D54;
+  padding: 12px 24px;
+  margin: 20px 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.big-button:hover {
+  background-color: #022c541e;
 }
