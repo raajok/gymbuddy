@@ -22,6 +22,9 @@ router.post('/', (req, res) => {
     .save()
     .then(savedTraining => {
       res.json(savedTraining);
+    })
+    .catch(error => {
+      console.log(error);
     });
 });
 
@@ -31,6 +34,9 @@ router.get('/', (req, res) => {
     .find({}, {__v: 0})
     .then((trainings) => {
       res.json(trainings);
+    })
+    .catch(error => {
+      console.log(error);
     });
 });
 

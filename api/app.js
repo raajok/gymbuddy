@@ -33,6 +33,7 @@ app.use('/api/', trainingRouter);
 // Router for programs page
 app.use('/api/programs', programsRouter);
 
-app.listen(9000, () => {
-  console.log(`Server started at ${9000}`);
+const PORT = process.env.PORT || 9000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
 });
